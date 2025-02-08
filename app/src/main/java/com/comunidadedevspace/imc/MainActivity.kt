@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         val btncalcular = findViewById<Button>(R.id.btncalcular)
 
         btncalcular.setOnClickListener {
-            val peso: String = edtpeso.text.toString()
-            val altura:String = edtaltura.text.toString()
+            val pesoStr: String = edtpeso.text.toString()
+            val alturaStr:String = edtaltura.text.toString()
 
-            if (peso == "" || altura == "") {
+            if (pesoStr == "" || alturaStr == "") {
                 Snackbar
                     .make(edtpeso, "Preencha todos os campos",
                         Snackbar.LENGTH_LONG
@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
 
             else {
 
-                val altura = altura.toFloat()
-                val peso = peso.toFloat()
+                val altura = alturaStr.toFloat()
+                val peso = pesoStr.toFloat()
 
 
 
